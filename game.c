@@ -52,7 +52,17 @@ void play_game() {
         refresh();
     }
 
-    
+    mvprintw(11, 10, "Tekan 'm' untuk kembali ke menu, atau 'r' untuk main lagi.");
+    refresh();
+
+    while (1) {
+        int ch = getch();
+        if (ch == 'm') break;
+        if (ch == 'r') {
+            play_game();
+            break;
+        }
+    }
 }
 
 #ifndef GAME_H
